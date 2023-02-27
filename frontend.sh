@@ -1,3 +1,4 @@
+echo -e "\e[33mInstalling nginx\e[0"
 yum install nginx -y
 rm -rf /usr/share/nginx/html/*
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
