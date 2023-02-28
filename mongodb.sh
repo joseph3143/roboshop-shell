@@ -16,3 +16,4 @@ print_head "Start Mongodb Service"
 systemctl restart mongod &>>${log_file}
 
 # Update listen address from 127.0.0.1 to 0.0.0.0 in /etc/mongod.conf
+
