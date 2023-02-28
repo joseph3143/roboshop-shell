@@ -30,6 +30,3 @@ print_head "Starting nginx"
 systemctl restart nginx &>>${log_file}
 echo $?
 
-
-
-
