@@ -18,6 +18,7 @@ status_check $?
 print_head "Create Allication Directory"
 if [ ! -d /app ]; then
   mkdir /app &>>${log_file}
+fi
 mkdir /app &>>${log_file}
 status_check $?
 
