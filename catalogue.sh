@@ -15,11 +15,10 @@ if [ $? -ne 0 ]; then
 fi
 status_check $?
 
-print_head "Create Allication Directory"
+print_head "Create Application Directory"
 if [ ! -d /app ]; then
   mkdir /app &>>${log_file}
 fi
-mkdir /app &>>${log_file}
 status_check $?
 
 print_head "Delete Old Content"
