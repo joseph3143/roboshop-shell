@@ -55,7 +55,7 @@ systemctl start user &>>${log_file}
 status_check $?
 
 print_head "Copy MongoDB Repo File "
-cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log_file}
+cp configs/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log_file}
 status_check $?
 
 print_head "Install Mongo Client"
