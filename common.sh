@@ -29,6 +29,7 @@ schema_setup() {
     print_head "Load Schema"
     mongo --host mongodb.devopsculture.online </app/schema/${component}.js &>>${log_file}
     status_check $?
+  fi
 }
 
 nodejs() {
@@ -87,5 +88,4 @@ nodejs() {
   status_check $?
 
   schema_setup
-
 }
