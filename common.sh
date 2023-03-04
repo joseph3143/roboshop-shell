@@ -16,7 +16,7 @@ status_check() {
   fi
 }
 
-schema_setup(){
+schema_setup() {
   if [ "${schema_type}" == "mongo" ]; then
     print_head "Copy MongoDB Repo File "
     cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongodb.repo &>>${log_file}
@@ -30,7 +30,8 @@ schema_setup(){
     mongo --host mongodb.devopsculture.online </app/schema/${component}.js &>>${log_file}
     status_check $?
 }
-nodejs(){
+
+nodejs() {
   print_head "Configure NodeJS Repo"
   curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${log_file}
   status_check $?
