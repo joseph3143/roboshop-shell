@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##### Change these values ###
-ZONE_ID="Z0628828KZGH4QGSXZXN"
+ZONE_ID="Z103214126L48SQW30RSR"
 DOMAIN="devopsculture.online"
 SG_NAME="allow-all"
 #############################
@@ -46,7 +46,6 @@ fi
 
 
 for component in catalogue cart user shipping payment frontend mongodb mysql rabbitmq redis dispatch; do
-  COMPONENT="${component}"
+  COMPONENT="${component}-dev"
   create_ec2
 done
-
